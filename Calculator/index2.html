@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="shortcut icon" href="icons8-calculator-48.png" type="image/x-icon">
+</head>
+
+<body>
+    <h2 class="title">Basic Maths Calculator</h2>
+    <div class="container">
+        <div class="calculator">
+            <form>
+                <div class="number">
+                    <input type="text" class="display" id="number">
+                </div>
+                <div>
+                    <input type="button" value="AC" onclick="document.getElementById('number').value = '' "
+                        class="main">
+                    <input type="button" value="DE"
+                        onclick="document.getElementById('number').value = document.getElementById('number').value.slice(0, -1)"
+                        class="main">
+                    <input type="button" value="." onclick="document.getElementById('number').value += '.' "
+                        class="main">
+                    <input type="button" value="ON" onclick="alert('Calculator is ON')" class="main">
+                </div>
+                <div>
+                    <input type="button" value="7" onclick="document.getElementById('number').value += '7' ">
+                    <input type="button" value="8" onclick="document.getElementById('number').value += '8' ">
+                    <input type="button" value="9" onclick="document.getElementById('number').value += '9' ">
+                    <input type="button" value="/" onclick="document.getElementById('number').value += '/' "
+                        class="operators">
+                </div>
+                <div>
+                    <input type="button" value="4" onclick="document.getElementById('number').value += '4' ">
+                    <input type="button" value="5" onclick="document.getElementById('number').value += '5' ">
+                    <input type="button" value="6" onclick="document.getElementById('number').value += '6' ">
+                    <input type="button" value="*" onclick="document.getElementById('number').value += '*' "
+                        class="operators">
+                </div>
+                <div>
+                    <input type="button" value="1" onclick="document.getElementById('number').value += '1' ">
+                    <input type="button" value="2" onclick="document.getElementById('number').value += '2' ">
+                    <input type="button" value="3" onclick="document.getElementById('number').value += '3' ">
+                    <input type="button" value="-" onclick="document.getElementById('number').value += '-' "
+                        class="operators">
+                </div>
+                <div class="last">
+                    <input type="button" value="00" onclick="document.getElementById('number').value += '00' ">
+                    <input type="button" value="0" onclick="document.getElementById('number').value += '0' ">
+                    <input type="button" value="="
+                        onclick="document.getElementById('number').value = eval(document.getElementById('number').value)">
+                    <input type="button" value="+" onclick="document.getElementById('number').value += '+' "
+                        class="operators">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
